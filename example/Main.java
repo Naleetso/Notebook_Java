@@ -14,7 +14,7 @@ public class Main {
             System.out.println("3. Удалить контакт");
             System.out.println("4. Показать контакты");
             System.out.println("5. Выйти из телефонной книги");
-            System.out.print("Выбирете действие, что вы хотите сделать: ");
+            System.out.print("Выбирете действие: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
 
