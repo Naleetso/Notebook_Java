@@ -22,7 +22,7 @@ class PhoneBook {
         if (contacts.containsKey(name)) {
             contacts.get(name).removeNumber(number);
         } else {
-            System.out.println("Контакт не найден.");
+            System.out.println("Contact is now found.");
         }
     }
 
@@ -30,7 +30,7 @@ class PhoneBook {
         if (contacts.containsKey(name)) {
             contacts.remove(name);
         } else {
-            System.out.println("Контакт не найден.");
+            System.out.println("Contact is now found.");
         }
     }
 
