@@ -12,25 +12,29 @@ class PhoneBook {
     public void addContact(String name, int number) {
         if (contacts.containsKey(name)) {
             contacts.get(name).addNumber(number);
+            System.out.println("\nContact number added.");
         } else {
             Contact newContact = new Contact(name, number);
             contacts.put(name, newContact);
+            System.out.println("\nContact added.");
         }
     }
 
     public void removeNumber(String name, int number) {
         if (contacts.containsKey(name)) {
             contacts.get(name).removeNumber(number);
+            System.out.println("\nContact number removed.");
         } else {
-            System.out.println("Contact is now found.");
+            System.out.println("\nContact is not found.");
         }
     }
 
     public void removeContact(String name) {
         if (contacts.containsKey(name)) {
             contacts.remove(name);
+            System.out.println("\nContact removed.");
         } else {
-            System.out.println("Contact is now found.");
+            System.out.println("\nContact is not found.");
         }
     }
 
@@ -38,6 +42,7 @@ class PhoneBook {
         List<Contact> sortedContacts = new ArrayList<>(contacts.values());
         sortedContacts.sort(Comparator.comparingInt(c -> c.getNumbers().size()));
         Collections.reverse(sortedContacts);
+        System.out.println("\nList of contacts:\n");
 
         for (Contact contact : sortedContacts) {
             System.out.println(contact);
